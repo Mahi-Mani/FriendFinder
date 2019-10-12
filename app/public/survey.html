@@ -562,7 +562,7 @@ function calculateResult(){
   $.ajax({ url: "/api/friends", method: "GET" })
       .then(function(friends) {
 
-        
+        console.log(friends.length);
         for(var j=0; j<friends.length-1; j++){
           temp = 0;
 
@@ -577,7 +577,10 @@ function calculateResult(){
 
     result.push(temp);
     resultTemp.push(temp);
-    result.sort();
+    // result.sort();
+    result.sort((a,b) => a - b);
+    console.log("Result");
+    console.log(result);
   }
     projectResult(resultTemp.indexOf(result[0]));
   })
