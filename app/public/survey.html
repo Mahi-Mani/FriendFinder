@@ -489,13 +489,6 @@
 
    <script type="text/javascript">
    var answerArr = [];
-   var difference1 = 0;
-   var difference2 = 0;
-   var difference3 = 0;
-   var difference4 = 0;
-   var difference5 = 0;
-   var flag;
-  //  var newFriend = {};
 
    // On click of submit button
 $("#submit-btn").on("click", function(event){
@@ -503,14 +496,11 @@ $("#submit-btn").on("click", function(event){
     event.preventDefault();
 
     var name = $("#enterName").val().trim();
-    var email = $("#enterImageUrl").val().trim();
+    var photo = $("#enterImageUrl").val().trim();
 
     for(var i=1; i<=50; i++){
     if($("input[id=optionsRadios"+i+"]:checked").val()){
       var number = ($("input[id=optionsRadios"+i+"]:checked").val());
-      // console.log(number);
-      // console.log("radio");
-      // console.log($("input[id=optionsRadios"+i+"]:checked").val());
       if(answerArr.length <= 10) 
         answerArr.push(parseInt(number));
     }
@@ -519,7 +509,7 @@ $("#submit-btn").on("click", function(event){
 
  var newFriend = {
         name: name,
-        email: email,
+        photo: photo,
         scores: answerArr
       };
       
@@ -583,97 +573,15 @@ function calculateResult(){
       temp = temp + (answerArr[i] - friends[j].scores[i]);
       else
       temp = temp + (friends[j].scores[i] - answerArr[i]);
-  
-      console.log(i);
-      console.log(temp);
-      
     }
 
     result.push(temp);
     resultTemp.push(temp);
     result.sort();
-    console.log("Result : " + result[0]);
-    console.log("Result index : " + resultTemp.indexOf(result[0]));
-    // if(temp < result){
-      //   result = temp
-      // }
   }
-    // console.log("Result : " + result);
     projectResult(resultTemp.indexOf(result[0]));
   })
 }
-
-  
-
-  // for(var i=0; i<answerArr.length; i++){
-  //   if(answerArr[i] > friends[1].scores[i])
-  //   {
-  //   difference2 = difference2 + (answerArr[i] - friends[1].scores[i]);
-  //   }
-  //   else
-  //   difference2 = difference2 + (friends[1].scores[i] - answerArr[i]);
-  // }
-  // console.log(difference2);
-
-  // for(var i=0; i<answerArr.length; i++){
-  //   if(answerArr[i] > friends[2].scores[i])
-  //   {
-  //   difference3 = difference3 + (answerArr[i] - friends[2].scores[i]);
-  //   }
-  //   else
-  //   difference3 = difference3 + (friends[2].scores[i] - answerArr[i]);
-  // }
-  // console.log(difference3);
-
-  
-  // for(var i=0; i<answerArr.length; i++){
-  //   if(answerArr[i] > friends[3].scores[i])
-  //   {
-  //   difference4 = difference4 + (answerArr[i] - friends[3].scores[i]);
-  //   }
-  //   else
-  //   difference4 = difference4 + (friends[3].scores[i] - answerArr[i]);
-  // }
-  // console.log(difference4);
-
-  // for(var i=0; i<answerArr.length; i++){
-  //   if(answerArr[i] > friends[4].scores[i])
-  //   {
-  //   difference5 = difference5 + (answerArr[i] - friends[4].scores[i]);
-  //   }
-  //   else
-  //   difference5 = difference5 + (friends[4].scores[i] - answerArr[i]);
-  // }
-  // console.log(difference5);
-
-  // if(difference1 <= difference2 && difference1 <= difference3 && difference1 <= difference4 && difference1 <= difference5 ){
-  //   console.log(difference1 + "is the smallest");
-  //   // Calling project result along with the value of the index number to keep track of
-  //   projectResult(difference1,0);
-  // }
-  // else if(difference2 <= difference1 && difference2 <= difference3 && difference2 <= difference4 && difference2 <= difference5){
-  //   console.log(difference2 + " is the smallest");
-  //   // Calling project result along with the value of the index number to keep track of
-  //   projectResult(difference2,1);
-  // }
-  // else if(difference3 <= difference1 && difference3 <= difference2 && difference3 <= difference4 && difference3 <= difference5){
-  //   console.log(difference3 + " is the smallest");
-  //   // Calling project result along with the value of the index number to keep track of
-  //   projectResult(difference3,2);
-  // }
-  
-  // else if(difference4 <= difference1 && difference4 <= difference2 && difference4 <= difference3 && difference4 <= difference5){
-  //   console.log(difference4 + " is the smallest");
-  //   // Calling project result along with the value of the index number to keep track of
-  //   projectResult(difference4,3);
-  // }
-  // else{
-  //   console.log(difference5 + " is the smallest");
-  //   // Calling project result along with the value of the index number to keep track of
-  //   projectResult(difference5,4);
-  // }
- 
-
 
 // Function that projects results of similarity
 function projectResult(index){
