@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Material Design for Bootstrap fonts and icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+
+    <!-- Material Design for Bootstrap CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <title>Take a Survey</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <style>
+        #profile{
+    float: center;
+    display: block;
+    width: 450px;
+    height: 450px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 10px 5px grey;
+  } 
+  body{
+    background-image: url("https://cdn.pizap.com/pizapfiles/images/photo_backgrounds_textures_app04.jpg");
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position:center;
+    }
+    hr{
+      border: 1px solid #00ffff;
+    }
+    </style>
+    
+  </head>
+  <body>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+  
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <!-- Material -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+
+
+    <!-- Forms -->
+    <!-- Row -->
+    <div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+    <form name="myForm">
+            <div class="form-group needs-validation">
+                    <label for="name"class="text-primary"><h4>Name</h4></label>
+                    <br>
+                    <input type="name" class="form-control text-primary is-valid" id="enterName" aria-describedby="emailHelp" placeholder="Enter name" name="name" required>
+                    <div class="invalid-feedback">
+          Please choose a username.
+        </div>
+                    <small id="name" class="form-text text-muted"class="text-primary">This is required</small>
+                  </div>
+                  <div class="form-group">
+                        <label for="image"class="text-primary"><h4>Photo URL</h4></label>
+                        <br>
+                        <input type="email" class="form-control item text-primary" id="enterImageUrl" aria-describedby="emailHelp" placeholder="Enter email" name="email"required>
+                        <small id="emailHelp" class="form-text text-muted"class="text-primary">This is required</small>
+                      </div>
+        </form>
+            <hr>
+
+             <!-- Question 1 -->
+             <form>
+        <label for="ques1"class="text-primary">You easily talk to anyone about anything</label>
+        <br>
+        <div class="radio text-primary">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="1"class="text-primary">
+                <p class="text-primary">  1 <small class="text-primary">Strongly Disagree</small></p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="2">
+                  <p class="text-primary"> 2 </p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios3" value="3">
+                  <p class="text-primary">3</p>
+                </label>
+              </div>
+              <div class="radio">
+                    <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios4" value="4">
+                      <p class="text-primary">4</p>
+                    </label>
+                  </div>
+                  <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios5" value="5">
+                          <p class="text-primary">  5 <small class="text-primary">Strongly Agree</small></p>
+                        </label>
+                      </div>
+                            <hr>
+                        </form>
+
+                            <!-- Question 2 -->
+                            <form>
+        <label for="ques2"class="text-primary">You care more about trends and fashion</label>
+        <br>
+        <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios6" value="1">
+                  <p class="text-primary">  1 <small class="text-primary">Strongly Disagree</small></p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios7" value="2">
+                  <p class="text-primary"> 2 </p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios8" value="3">
+                  <p class="text-primary">3</p>
+                </label>
+              </div>
+              <div class="radio">
+                    <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios9" value="4">
+                      <p class="text-primary">4</p>
+                    </label>
+                  </div>
+                  <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios10" value="5">
+                          <p class="text-primary">  5 <small class="text-primary">Strongly Agree</small></p>
+                        </label>
+                      </div>
+                            <hr>
+                        </form>
+
+                            <!-- Question 3 -->
+        <form>
+        <label for="ques3"class="text-primary">You are easily distracted and tends to leave things around or forget things</label>
+        <br>
+        <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios11" value="1">
+                  <p class="text-primary">  1 <small class="text-primary">Strongly Disagree</small></p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios12" value="2">
+                  <p class="text-primary"> 2 </p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios13" value="3">
+                  <p class="text-primary">3</p>
+                </label>
+              </div>
+              <div class="radio">
+                    <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios14" value="4">
+                      <p class="text-primary">4</p>
+                    </label>
+                  </div>
+                  <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios15" value="5">
+                          <p class="text-primary">  5 <small class="text-primary">Strongly Agree</small></p>
+                        </label>
+                      </div>
+                            <hr>
+                        </form>
+
+                            <!-- Question 4 -->
+        <form>
+        <label for="ques4"class="text-primary">You have a constant desire to control and manage your friends’ actions</label>
+        <br>
+        <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios16" value="1">
+                  <p class="text-primary">  1 <small class="text-primary">Strongly Disagree</small></p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios17" value="2">
+                  <p class="text-primary"> 2 </p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios18" value="3">
+                  <p class="text-primary">3</p>
+                </label>
+              </div>
+              <div class="radio">
+                    <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios19" value="4">
+                      <p class="text-primary">4</p>
+                    </label>
+                  </div>
+                  <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios20" value="5">
+                          <p class="text-primary">  5 <small class="text-primary">Strongly Agree</small></p>
+                        </label>
+                      </div>
+                            <hr>
+                        </form>
+
+                            <!-- Question 5 -->
+        <form>
+        <label for="ques5"class="text-primary">You thrive for order and schedules</label>
+        <br>
+        <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios21" value="1">
+                  <p class="text-primary">  1 <small class="text-primary">Strongly Disagree</small></p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios22" value="2">
+                  <p class="text-primary"> 2 </p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios23" value="3">
+                  <p class="text-primary">3</p>
+                </label>
+              </div>
+              <div class="radio">
+                    <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios24" value="4">
+                      <p class="text-primary">4</p>
+                    </label>
+                  </div>
+                  <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios25" value="5">
+                          <p class="text-primary">  5 <small class="text-primary">Strongly Agree</small></p>
+                        </label>
+                      </div>
+                            <hr>
+                        </form>
+
+                            <!-- Question 6 -->
+        <form>
+        <label for="ques6"class="text-primary">One can always count on you to get the job done as you are incredibly organized</label>
+        <br>
+        <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios26" value="1">
+                  <p class="text-primary">  1 <small class="text-primary">Strongly Disagree</small></p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios27" value="2">
+                  <p class="text-primary"> 2 </p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios28" value="3">
+                  <p class="text-primary">3</p>
+                </label>
+              </div>
+              <div class="radio">
+                    <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios29" value="4">
+                      <p class="text-primary">4</p>
+                    </label>
+                  </div>
+                  <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios30" value="5">
+                          <p class="text-primary">  5 <small class="text-primary">Strongly Agree</small></p>
+                        </label>
+                      </div>
+                            <hr>
+                        </form>
+
+                            <!-- Question 7 -->
+        <form>
+        <label for="ques7"class="text-primary">You are interested in adventure and trying new things even if they may be unusual</label>
+        <br>
+        <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios31" value="1">
+                  <p class="text-primary">  1 <small class="text-primary">Strongly Disagree</small></p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios32" value="2">
+                  <p class="text-primary"> 2 </p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios33" value="3">
+                  <p class="text-primary">3</p>
+                </label>
+              </div>
+              <div class="radio">
+                    <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios34" value="4">
+                      <p class="text-primary">4</p>
+                    </label>
+                  </div>
+                  <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios35" value="5">
+                          <p class="text-primary">  5 <small class="text-primary">Strongly Agree</small></p>
+                        </label>
+                      </div>
+                            <hr>
+                        </form>
+
+                            <!-- Question 8 -->
+        <form>
+        <label for="ques8"class="text-primary">You are so smart that you tend to make your decisions based on logic or reason</label>
+        <br>
+        <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios36" value="1">
+                  <p class="text-primary">  1 <small class="text-primary">Strongly Disagree</small></p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios37" value="2">
+                  <p class="text-primary"> 2 </p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios38" value="3">
+                  <p class="text-primary">3</p>
+                </label>
+              </div>
+              <div class="radio">
+                    <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios39" value="4">
+                      <p class="text-primary">4</p>
+                    </label>
+                  </div>
+                  <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios40" value="5">
+                          <p class="text-primary">  5 <small class="text-primary">Strongly Agree</small></p>
+                        </label>
+                      </div>
+                            <hr>
+                        </form>
+
+                            <!-- Question 9 -->
+        <form>
+        <label for="ques9"class="text-primary">You don't really move out on Sundays</label>
+        <br>
+        <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios41" value="1">
+                  <p class="text-primary">  1 <small class="text-primary">Strongly Disagree</small></p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios42" value="2">
+                  <p class="text-primary"> 2 </p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios43" value="3">
+                  <p class="text-primary">3</p>
+                </label>
+              </div>
+              <div class="radio">
+                    <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios44" value="4">
+                      <p class="text-primary">4</p>
+                    </label>
+                  </div>
+                  <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios45" value="5">
+                          <p class="text-primary">  5 <small class="text-primary">Strongly Agree</small></p>
+                        </label>
+                      </div>
+                            <hr>
+                        </form>
+
+                            <!-- Question 10 -->
+        <form>
+        <label for="ques10"class="text-primary">Remembers specifics about certain individuals because you value loyalty</label>
+        <br>
+        <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios46" value="1" data-value-1 = "1">
+                  <p class="text-primary">  1 <small class="text-primary">Strongly Disagree</small></p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios47" value="2" data-value-2 = "2">
+                  <p class="text-primary"> 2 </p>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios48" value="3"data-value-3 = "3">
+                  <p class="text-primary">3</p>
+                </label>
+              </div>
+              <div class="radio">
+                    <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios49" value="4"data-value-4 = "4">
+                      <p class="text-primary">4</p>
+                    </label>
+                  </div>
+                  <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios50" value="5"data-value-5 = "5">
+                          <p class="text-primary">  5 <small class="text-primary">Strongly Agree</small></p>
+                        </label>
+                      </div>
+                            <hr>
+                        </form>
+
+            
+        </form>
+        <button type="submit" class="btn btn-primary"id="submit-btn">Submit</button>
+        <a class="btn btn-primary"href="/"><i class="fas fa-home"></i>&nbsp Home</a>
+        </div>
+        <div class="col-md-2"></div>
+        </div>
+
+        <!-- Modals -->
+        <div class="modal" tabindex="-1" role="dialog"id="modal">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <div id="photo">
+                    </div>
+                    </div>
+                    <div class="modal-body text-primary">
+                        <i class="fas fa-theater-masks"></i>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal"id="modalClose">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+   <script type="text/javascript">
+   var answerArr = [];
+   var difference1 = 0;
+   var difference2 = 0;
+   var difference3 = 0;
+   var difference4 = 0;
+   var difference5 = 0;
+   var flag;
+  //  var newFriend = {};
+
+   // On click of submit button
+$("#submit-btn").on("click", function(event){
+    // To prevent page from loading
+    event.preventDefault();
+
+    var name = $("#enterName").val().trim();
+    var email = $("#enterImageUrl").val().trim();
+
+    for(var i=1; i<=50; i++){
+    if($("input[id=optionsRadios"+i+"]:checked").val()){
+      var number = ($("input[id=optionsRadios"+i+"]:checked").val());
+      // console.log(number);
+      // console.log("radio");
+      // console.log($("input[id=optionsRadios"+i+"]:checked").val());
+      if(answerArr.length <= 10) 
+        answerArr.push(parseInt(number));
+    }
+    
+}
+
+ var newFriend = {
+        name: name,
+        email: email,
+        scores: answerArr
+      };
+      
+      
+
+      // Get value from the api friends
+      $.ajax({ url: "/api/friends", method: "GET" })
+      .then(function(friends) {
+
+        // console.log(friends[0].name);
+        // friends.push(newFriend);
+        // Input validation
+      var x = document.forms["myForm"]["name"].value;
+          var y = document.forms["myForm"]["email"].value;
+      if ((x == "") && (y == "")){
+            alert("Please enter details to proceed further");
+            return false;
+          }
+          // Radio button validation
+          else if((newFriend.scores.length < 10)){
+            alert("Please check radio buttons to view result");
+            answerArr = [];
+          }
+          // When all validations are done then proceeds to next functionality
+          else{
+            // Posting new value to api route
+      $.post("/api/friends", newFriend,
+      function(data) {
+          console.log("After posting : ");
+          console.log(data);
+        });
+            calculateResult();
+
+          }
+      });
+    
+  
+})
+
+
+// Calculate difference between user scores and available scores
+function calculateResult(){
+  console.log(answerArr.length);
+  var result = [];
+  var resultTemp = [];
+  var index = [];
+  var temp;
+
+  // Get value from the api friends
+  $.ajax({ url: "/api/friends", method: "GET" })
+      .then(function(friends) {
+
+        
+        for(var j=0; j<friends.length-1; j++){
+          temp = 0;
+
+  for(var i=0; i<answerArr.length; i++){
+    // console.log("userarray " + answerArr[i]);
+    // console.log("friends array " + friends[j].scores[i]);
+      if(answerArr[i] > friends[j].scores[i])
+      temp = temp + (answerArr[i] - friends[j].scores[i]);
+      else
+      temp = temp + (friends[j].scores[i] - answerArr[i]);
+  
+      console.log(i);
+      console.log(temp);
+      
+    }
+
+    result.push(temp);
+    resultTemp.push(temp);
+    result.sort();
+    console.log("Result : " + result[0]);
+    console.log("Result index : " + resultTemp.indexOf(result[0]));
+    // if(temp < result){
+      //   result = temp
+      // }
+  }
+    // console.log("Result : " + result);
+    projectResult(resultTemp.indexOf(result[0]));
+  })
+}
+
+  
+
+  // for(var i=0; i<answerArr.length; i++){
+  //   if(answerArr[i] > friends[1].scores[i])
+  //   {
+  //   difference2 = difference2 + (answerArr[i] - friends[1].scores[i]);
+  //   }
+  //   else
+  //   difference2 = difference2 + (friends[1].scores[i] - answerArr[i]);
+  // }
+  // console.log(difference2);
+
+  // for(var i=0; i<answerArr.length; i++){
+  //   if(answerArr[i] > friends[2].scores[i])
+  //   {
+  //   difference3 = difference3 + (answerArr[i] - friends[2].scores[i]);
+  //   }
+  //   else
+  //   difference3 = difference3 + (friends[2].scores[i] - answerArr[i]);
+  // }
+  // console.log(difference3);
+
+  
+  // for(var i=0; i<answerArr.length; i++){
+  //   if(answerArr[i] > friends[3].scores[i])
+  //   {
+  //   difference4 = difference4 + (answerArr[i] - friends[3].scores[i]);
+  //   }
+  //   else
+  //   difference4 = difference4 + (friends[3].scores[i] - answerArr[i]);
+  // }
+  // console.log(difference4);
+
+  // for(var i=0; i<answerArr.length; i++){
+  //   if(answerArr[i] > friends[4].scores[i])
+  //   {
+  //   difference5 = difference5 + (answerArr[i] - friends[4].scores[i]);
+  //   }
+  //   else
+  //   difference5 = difference5 + (friends[4].scores[i] - answerArr[i]);
+  // }
+  // console.log(difference5);
+
+  // if(difference1 <= difference2 && difference1 <= difference3 && difference1 <= difference4 && difference1 <= difference5 ){
+  //   console.log(difference1 + "is the smallest");
+  //   // Calling project result along with the value of the index number to keep track of
+  //   projectResult(difference1,0);
+  // }
+  // else if(difference2 <= difference1 && difference2 <= difference3 && difference2 <= difference4 && difference2 <= difference5){
+  //   console.log(difference2 + " is the smallest");
+  //   // Calling project result along with the value of the index number to keep track of
+  //   projectResult(difference2,1);
+  // }
+  // else if(difference3 <= difference1 && difference3 <= difference2 && difference3 <= difference4 && difference3 <= difference5){
+  //   console.log(difference3 + " is the smallest");
+  //   // Calling project result along with the value of the index number to keep track of
+  //   projectResult(difference3,2);
+  // }
+  
+  // else if(difference4 <= difference1 && difference4 <= difference2 && difference4 <= difference3 && difference4 <= difference5){
+  //   console.log(difference4 + " is the smallest");
+  //   // Calling project result along with the value of the index number to keep track of
+  //   projectResult(difference4,3);
+  // }
+  // else{
+  //   console.log(difference5 + " is the smallest");
+  //   // Calling project result along with the value of the index number to keep track of
+  //   projectResult(difference5,4);
+  // }
+ 
+
+
+// Function that projects results of similarity
+function projectResult(index){
+  
+    // Get value from the api friends
+  $.ajax({ url: "/api/friends", method: "GET" })
+      .then(function(friends) {
+
+        var name =  $("#enterName").val().trim();
+    console.log("flag " + index);
+    $("#result").text(friends[index].name);
+    $("#photo").empty();
+    $(".modal-body").empty();
+    var imgTag = $("<img>");
+    imgTag.attr("src", friends[index].photo);
+    imgTag.attr("id", "profile");
+    imgTag.attr("alt", index);
+    $("#photo").append(imgTag);
+    $("#modal").modal("toggle");
+    $(".modal-body").append("<h4>" + "Here you Go " + name + "! Your Twin is " + friends[index].name + " <i class='fas fa-theater-masks'></i>"+ "</h4>");
+  });
+
+}
+
+// On click of close button on modal clears values entered/checked by user
+$("#modalClose").on("click", function(){
+  
+  $("#enterName").val("");
+  $("#enterEmail").val("");
+  $("input:radio").attr("checked", false);
+  location.reload();
+})
+
+   </script>
+
+</body>
+
+  
+</html>
